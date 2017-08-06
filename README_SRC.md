@@ -6,7 +6,7 @@ In this project, we aim to develop a model predictive controller (MPC) to drive 
 
 ## The Model
 
-The model we used here is a kinematic bicycle model.
+A kinematic bicycle model is used in this project.
 
 ```
     State vector: [x, y, psi, v, cte, epsi]
