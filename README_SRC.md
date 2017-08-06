@@ -113,8 +113,8 @@ To do that, we use *time_pre* to record the time moment when the previous round 
 And use *latency_pre* to save the elapse time of finishing the function *h.onMessage()* during the previous step.
 
 ```
-std::chrono::duration<double> elapsed_seconds = std::chrono::system_clock::now() - time_pre;
-double latency_pre = elapsed_seconds.count();
+    std::chrono::duration<double> elapsed_seconds = std::chrono::system_clock::now() - time_pre;
+    double latency_pre = elapsed_seconds.count();
 ```
 To handle with some unexpected high latency value, we ignore the latency values higher than 0.25 s.
 ```
