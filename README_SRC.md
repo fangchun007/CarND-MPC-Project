@@ -117,6 +117,16 @@ std::chrono::duration<double> elapsed_seconds = std::chrono::system_clock::now()
 double latency_pre = elapsed_seconds.count();
 ```
 To handle with some unexpected high latency value, we ignore the latency values higher than 0.25 s.
+```
+    double latency;
+    if (!latency_init) { latency = latency_pre; }
+    else
+    {
+      latency = 0.15;
+      latency_init = false;
+    }
+    if (latency >= 0.25) { latency = 0.25; }
+```
 
 ### Tuning The Cost Function
 
