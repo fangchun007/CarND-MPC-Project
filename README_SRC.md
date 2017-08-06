@@ -154,6 +154,7 @@ In this project, we consider the curvature of the reference trajectory instead. 
     }
 ```
 **Local expression of curvature**
+
 Suppose the curve is $y = f(x)$. The the curvature at point $x$ is:
 ```
     \kappa = \frac{\|f''(x)\|}{(1+f'^2(x))^{3/2}}
